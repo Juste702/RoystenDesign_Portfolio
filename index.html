@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roysten KOSSOU</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+  </head>
+
+  <body class="bg-[#0d0d0d] text-gray-100 font-sans">
+
+    <!-- HEADER -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-black/40 backdrop-blur-md border-b border-fuchsia-500/20">
+  <div class="max-w-6xl mx-auto flex justify-between items-center py-4 px-6">
+    <h1 class="text-2xl font-bold text-fuchsia-400 tracking-wide">Roysten<span class="text-gray-300">Design</span></h1>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex space-x-6 text-gray-300 font-medium">
+      <a href="#about" class="hover:text-fuchsia-400 transition">About</a>
+      <a href="#portfolio" class="hover:text-fuchsia-400 transition">Portfolio</a>
+      <a href="#contact" class="hover:text-fuchsia-400 transition">Contact</a>
+    </nav>
+
+    <!-- Mobile Hamburger -->
+    <div class="md:hidden">
+      <button id="menu-btn" class="text-gray-300 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-black/90 border-t border-fuchsia-500/20">
+    <a href="#about" class="block px-6 py-3 text-gray-300 hover:text-fuchsia-400 transition">About</a>
+    <a href="#portfolio" class="block px-6 py-3 text-gray-300 hover:text-fuchsia-400 transition">Portfolio</a>
+    <a href="#contact" class="block px-6 py-3 text-gray-300 hover:text-fuchsia-400 transition">Contact</a>
+  </div>
+</header>
+
+    <!-- HERO -->
+    <section class="min-h-screen flex flex-col justify-center items-center text-center relative overflow-hidden pt-20">
+      <div class="absolute inset-0 bg-gradient-to-br from-purple-700/20 via-fuchsia-500/10 to-transparent blur-3xl"></div>
+      <h1 class="text-5xl md:text-6xl font-bold z-10 mb-4">
+        Hi, I'm <span class="text-fuchsia-400">Roysten KOSSOU</span>
+      </h1>
+      <p class="text-gray-400 text-lg z-10 max-w-xl">
+        A passionate <span class="text-white">Graphic Designer</span> who transforms ideas into stunning visuals.
+      </p>
+      <a href="#portfolio" class="mt-8 px-6 py-3 border border-fuchsia-400 text-fuchsia-400 hover:bg-fuchsia-500 hover:text-white transition rounded-full z-10">
+        View My Work
+      </a>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-20 px-6 md:px-20 text-center bg-[#111]">
+      <h2 class="text-3xl font-bold mb-6">About Me</h2>
+      <p class="text-gray-400 max-w-2xl mx-auto">
+        I am a young, passionate, creative, and constantly evolving graphic designer.
+        My goal is to help brands, businesses, and individuals stand out with modern,
+        professional visuals tailored to their identity. From digital design and visual
+        identity to artistic creations, I apply my expertise to unique and impactful projects.
+      </p>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="py-20 px-6 md:px-20 bg-[#0d0d0d] text-center">
+      <h2 class="text-3xl font-bold mb-12">Selected Works</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="relative group overflow-hidden rounded-2xl shadow-lg">
+          <img src="Images/aff_1.jpeg" class="w-full h-54 object-cover object-center transition-transform duration-500 group-hover:scale-110" alt="Project 1">
+          <div class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+            <p class="text-fuchsia-400 font-semibold">Brand Identity</p>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="relative group overflow-hidden rounded-2xl shadow-lg">
+          <img src="Images/aff_2.jpeg" class="w-full h-54 object-cover object-center transition-transform duration-500 group-hover:scale-110" alt="Project 2">
+          <div class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+            <p class="text-fuchsia-400 font-semibold">Poster Design</p>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="relative group overflow-hidden rounded-2xl shadow-lg">
+          <img src="Images/aff_3.jpeg" class="w-full h-54 object-cover transition-transform duration-500 group-hover:scale-110" alt="Project 3">
+          <div class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+            <p class="text-fuchsia-400 font-semibold">Digital Art</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-16 bg-gray-900 text-white text-center">
+      <h2 class="text-3xl font-bold mb-6">Let's Work Together</h2>
+      <form id="contact-form" action="https://formspree.io/f/xgvnglol" method="POST" class="max-w-md mx-auto space-y-4">
+        <input 
+          type="text" 
+          name="name" 
+          placeholder="Your Name" 
+          class="w-full p-3 rounded bg-gray-800 focus:outline-none"
+          required
+        >
+        <input 
+          type="email" 
+          name="_replyto" 
+          placeholder="Your Email" 
+          class="w-full p-3 rounded bg-gray-800 focus:outline-none"
+          required
+        >
+        <textarea 
+          name="message" 
+          placeholder="Your Message" 
+          rows="4" 
+          class="w-full p-3 rounded bg-gray-800 focus:outline-none"
+          required
+        ></textarea>
+        <button 
+          type="submit" 
+          class="bg-indigo-500 hover:bg-indigo-600 px-6 py-3 rounded font-semibold transition">
+          Send Message
+        </button>
+        <p id="form-status" class="text-sm mt-2"></p>
+      </form>
+</section>
+
+
+    <!-- FOOTER -->
+    <footer class="py-6 bg-black text-center text-gray-500 text-sm">
+      © 2025 Roysten Design — All rights reserved.
+      <div>
+        <!-- Floating WhatsApp (graphist) -->
+        <a
+          href="https://wa.me/2290143405361?text=Hi%20Roysten%2C%20I%27m%20interested%20in%20your%20work"
+          target="_blank" rel="noopener noreferrer"
+          aria-label="Chat on WhatsApp"
+          class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full shadow-xl transform hover:scale-105 transition"
+          style="background: linear-gradient(135deg,#10b981,#06b6d4);"
+        >
+          <!-- WhatsApp SVG (white) -->
+          <svg class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M20.52 3.48A11.88 11.88 0 0012 0C5.373 0 .002 5.373 0 12c0 2.115.552 4.183 1.6 6.016L0 24l6.174-1.573A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12 0-3.188-1.243-6.127-3.48-8.52zM12 21.5a9.411 9.411 0 01-4.374-1.077l-.312-.18-3.664.934.98-3.57-.2-.36A9.369 9.369 0 012.5 12c0-5.246 4.254-9.5 9.5-9.5S21.5 6.754 21.5 12 17.246 21.5 12 21.5z"/>
+            <path d="M17.4 14.2c-.3-.15-1.78-.88-2.06-.98-.28-.1-.48-.15-.68.15-.2.3-.78.98-.96 1.18-.18.2-.36.22-.66.07-.3-.15-1.26-.46-2.4-1.49-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.36.45-.54.15-.18.2-.3.3-.5.1-.2 0-.37-.05-.52-.05-.15-.68-1.62-.93-2.22-.24-.6-.49-.52-.68-.53-.18-.01-.4-.01-.62-.01-.22 0-.57.08-.87.37-.3.29-1.15 1.12-1.15 2.73s1.18 3.17 1.34 3.39c.16.22 2.32 3.56 5.62 4.98 3.3 1.42 3.3 0.95 3.9 0.89.6-.06 1.95-.79 2.23-1.55.27-.76.27-1.42.19-1.55-.08-.13-.3-.2-.6-.35z"/>
+          </svg>
+        </a>
+
+      </div>
+    </footer>
+  </body>
+</html>
