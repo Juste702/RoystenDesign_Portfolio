@@ -2,6 +2,18 @@
 document.addEventListener('DOMContentLoaded', () => {
   const btn = document.getElementById('menu-btn');
   const menu = document.getElementById('mobile-menu');
+  const sections = document.querySelectorAll(".fade-in-section");
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("fade-in-visible");
+        observer.unobserve(entry.target); // on arrête d'observer une fois visible
+      }
+    });
+  }, { threshold: 0.2 }); // la section est visible à 20% dans le viewport
+
+  sections.forEach(section => observer.observe(section));
 
   if (btn && menu) {
     btn.addEventListener('click', () => {
